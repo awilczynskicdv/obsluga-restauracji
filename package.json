@@ -1,0 +1,21 @@
+{
+  "name": "restaurant-manager-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/awilczynskicdv/obsluga-restauracji.git",
+  "author": "23795, 23760, 24327, 23744",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.0.5",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles --maxWorkers=1 --watch"
+  },
+  "dependencies": {
+    "config": "^3.3.6"
+  }
+}
