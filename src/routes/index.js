@@ -8,6 +8,8 @@ import {
   postExample,
 } from "./example.js";
 
+import { deleteMeal, getMeal, getMeals, patchMeal, postMeal } from "./meals.js";
+
 export default [
   {
     method: "GET",
@@ -39,5 +41,31 @@ export default [
     method: "DELETE",
     path: "/example/:id",
     cbs: [deleteExample],
+  },
+
+  {
+    method: "GET",
+    path: "/meals/all",
+    cbs: [getMeals],
+  },
+  {
+    method: "GET",
+    path: "/meals/:id",
+    cbs: [getMeal],
+  },
+  {
+    method: "POST",
+    path: "/meals",
+    cbs: [postMeal],
+  },
+  {
+    method: "PATCH",
+    path: "/meals",
+    cbs: [patchMeal],
+  },
+  {
+    method: "DELETE",
+    path: "/meals/:id",
+    cbs: [deleteMeal],
   },
 ];

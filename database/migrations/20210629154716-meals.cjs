@@ -1,15 +1,16 @@
-"use strict";
+'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("examples", {
+    await queryInterface.createTable("meals", {
       id: Sequelize.INTEGER,
       name: Sequelize.STRING,
-      data: Sequelize.STRING,
+      category: Sequelize.STRING,
+      price: Sequelize.FLOAT
     });
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("examples");
-  },
+    await queryInterface.dropTable("meals");
+  }
 };
