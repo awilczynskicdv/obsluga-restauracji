@@ -10,6 +10,16 @@ import {
 
 import { deleteMeal, getMeal, getMeals, patchMeal, postMeal } from "./meals.js";
 
+import {
+  deleteOrder,
+  getOrder,
+  getOrders,
+  patchOrder,
+  postOrder,
+} from "./orders.js";
+
+import { deleteBill, getBill, getBills, patchBill, postBill } from "./bills.js";
+
 export default [
   {
     method: "GET",
@@ -67,5 +77,55 @@ export default [
     method: "DELETE",
     path: "/meals/:id",
     cbs: [deleteMeal],
+  },
+  {
+    method: "GET",
+    path: "/orders/all",
+    cbs: [getOrders],
+  },
+  {
+    method: "GET",
+    path: "/orders/:id",
+    cbs: [getOrder],
+  },
+  {
+    method: "POST",
+    path: "/orders",
+    cbs: [postOrder],
+  },
+  {
+    method: "PATCH",
+    path: "/orders",
+    cbs: [patchOrder],
+  },
+  {
+    method: "DELETE",
+    path: "/orders/:id",
+    cbs: [deleteOrder],
+  },
+  {
+    method: "GET",
+    path: "/bills/all",
+    cbs: [getBills],
+  },
+  {
+    method: "GET",
+    path: "/bills/:id",
+    cbs: [getBill],
+  },
+  {
+    method: "POST",
+    path: "/bills",
+    cbs: [postBill],
+  },
+  {
+    method: "PATCH",
+    path: "/bills",
+    cbs: [patchBill],
+  },
+  {
+    method: "DELETE",
+    path: "/bills/:id",
+    cbs: [deleteBill],
   },
 ];
