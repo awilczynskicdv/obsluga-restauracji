@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[GET] api/private/bills - valid request - should return status 200 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "currency": "EUR",
+      "orderId": 1,
+      "value_currency": 33.64,
+      "value_pln": 33.64,
+    },
+    Object {
+      "currency": "USD",
+      "orderId": 2,
+      "value_currency": 7.64,
+      "value_pln": 20.64,
+    },
+  ],
+}
+`;

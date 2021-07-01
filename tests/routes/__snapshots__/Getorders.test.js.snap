@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[GET] api/private/orders - valid request - should return status 200 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "created": "30.06.2021",
+      "id": 1,
+      "price_total": 33.64,
+      "status": "preparing",
+      "table": "takeaway",
+    },
+  ],
+}
+`;
